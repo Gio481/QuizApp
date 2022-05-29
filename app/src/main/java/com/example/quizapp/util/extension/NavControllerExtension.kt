@@ -7,7 +7,7 @@ import androidx.navigation.NavController
 fun NavController.safeNavigate(
     @IdRes currentDestinationId: Int,
     @IdRes destinationId: Int,
-    args: Bundle? = null,
+    args: Bundle? = null
 ) {
     if (currentDestinationId == currentDestination?.id) {
         navigate(destinationId, args)
