@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_130_dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/quizTitleTextView"
+        style="@style/HighText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_500"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="History" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/quizDescriptionTextView"
+        style="@style/SmallText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_2_dp"
+        android:textColor="@color/grey_700"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@id/quizTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/quizTitleTextView"
+        tools:text="this is the quiz" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startQuizButton"
+        style="@style/MediumText"
+        android:layout_width="@dimen/dimen_130_dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:text="@string/start_text"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="@dimen/dimen_30_dp"
+        android:background="@color/grey_500"
+        app:layout_constraintTop_toBottomOf="@id/startQuizButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
