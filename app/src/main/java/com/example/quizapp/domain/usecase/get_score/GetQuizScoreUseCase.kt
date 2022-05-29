@@ -1,4 +1,4 @@
-package com.example.quizapp.domain.usecase
+package com.example.quizapp.domain.usecase.get_score
 
 interface GetQuizScoreUseCase {
     suspend fun saveQuizScore(key: String, value: Int)

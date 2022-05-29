@@ -1,4 +1,4 @@
-package com.example.quizapp.domain.usecase
+package com.example.quizapp.domain.usecase.get_score
 
 import com.example.quizapp.domain.repository.QuizScoreRepository
 import kotlinx.coroutines.flow.first
