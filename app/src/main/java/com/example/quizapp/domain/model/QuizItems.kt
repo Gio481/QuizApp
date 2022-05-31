@@ -5,5 +5,5 @@ data class QuizItems(
     val quizTitle: String,
     val quizDescription: String,
     val questionsCount: Int,
-    val question: List<Question>,
+    val questions: List<Question>,
 )
