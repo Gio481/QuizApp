@@ -9,7 +9,7 @@
     <View
         android:id="@+id/blackViewBackground"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/dimen_200_dp"
         android:background="@color/black_200"
         app:layout_constraintTop_toTopOf="parent" />
 
