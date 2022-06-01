@@ -7,9 +7,9 @@
     tools:context=".presentation.home.ui.HomeFragment">
 
     <View
-        android:id="@+id/blackView"
+        android:id="@+id/blackViewBackground"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/dimen_200_dp"
         android:background="@color/black_200"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,8 +32,8 @@
         android:backgroundTint="@color/yellow_500"
         android:elevation="@dimen/dimen_10_dp"
         app:cardCornerRadius="@dimen/dimen_15_dp"
-        app:layout_constraintBottom_toBottomOf="@id/blackView"
-        app:layout_constraintTop_toBottomOf="@id/blackView">
+        app:layout_constraintBottom_toBottomOf="@id/blackViewBackground"
+        app:layout_constraintTop_toBottomOf="@id/blackViewBackground">
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/HighText"
