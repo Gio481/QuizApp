@@ -11,11 +11,16 @@ import com.example.quizapp.util.ItemDiffUtil
 class QuizAnswersAdapter : ListAdapter<String, QuizAnswersAdapter.ViewHolder>(ItemDiffUtil()) {
 
     private var selectedPosition: Int? = null
+    var selectedAnswer: String? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = QuizAnswerItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view =
+            QuizAnswerItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         val viewHolder = ViewHolder(view)
-        view.root.setOnClickListener {
-            changeItems(viewHolder.adapterPosition)
+        with(view.quizAnswerCustomView) {
+            setOnClickListener {
+                selectedAnswer = answer
+                changeItems(viewHolder.adapterPosition)
+            }
         }
 
         return viewHolder
@@ -39,5 +44,9 @@ class QuizAnswersAdapter : ListAdapter<String, QuizAnswersAdapter.ViewHolder>(It
     private fun changeItems(position: Int) {
         selectedPosition = position
         notifyDataSetChanged()
+    }
+
+    fun resetAnswers() {
+        selectedPosition = null
     }
 }
