@@ -7,14 +7,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.quizapp.databinding.QuizItemLayoutBinding
 import com.example.quizapp.domain.model.QuizItems
 import com.example.quizapp.util.ItemDiffUtil
+import com.example.quizapp.util.OnItemCLickListener
 
-class QuizAdapter(private val onItemClickListener: OnItemClickListener) : ListAdapter<QuizItems, QuizAdapter.ViewHolder>(ItemDiffUtil()) {
+class QuizAdapter : ListAdapter<QuizItems, QuizAdapter.ViewHolder>(ItemDiffUtil()) {
 
+    lateinit var listener: OnItemCLickListener
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = QuizItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         val viewHolder = ViewHolder(view)
         view.startQuizButton.setOnClickListener {
-            onItemClickListener.onItemCLickListener(getItem(viewHolder.adapterPosition))
+            listener(getItem(viewHolder.adapterPosition))
         }
         return ViewHolder(view)
     }
