@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dimen_130_dp">
+    android:layout_height="@dimen/dimen_100_dp">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/quizTitleTextView"
-        style="@style/HighText"
+        style="@style/MediumText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black_500"
@@ -30,9 +30,9 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startQuizButton"
-        style="@style/MediumText"
+        style="@style/SmallText"
         android:layout_width="@dimen/dimen_130_dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dimen_40_dp"
         android:background="@drawable/button_background"
         android:text="@string/start_text"
         android:textAllCaps="false"
@@ -41,7 +41,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/dimen_1_dp"
         android:layout_marginVertical="@dimen/dimen_30_dp"
         android:background="@color/grey_500"
         app:layout_constraintTop_toBottomOf="@id/startQuizButton" />
