@@ -1,15 +1,12 @@
 package com.example.quizapp.di
 
-import com.example.quizapp.domain.usecase.get_quiz.GetQuizUseCase
-import com.example.quizapp.domain.usecase.get_quiz.GetQuizUseCaseImpl
-import com.example.quizapp.domain.usecase.get_score.GetQuizScoreUseCase
-import com.example.quizapp.domain.usecase.get_score.GetQuizScoreUseCaseImpl
-import com.example.quizapp.domain.usecase.get_user.GetUserUseCase
-import com.example.quizapp.domain.usecase.get_user.GetUserUseCaseImpl
+import com.example.quizapp.domain.usecase.home.HomeUseCase
+import com.example.quizapp.domain.usecase.home.HomeUseCaseImpl
+import com.example.quizapp.domain.usecase.quiz.QuizUseCase
+import com.example.quizapp.domain.usecase.quiz.QuizUseCaseImpl
 import org.koin.dsl.module
 
 val useCaseModule = module {
-    single<GetQuizScoreUseCase> { GetQuizScoreUseCaseImpl(get()) }
-    single<GetQuizUseCase> { GetQuizUseCaseImpl(get()) }
-    single<GetUserUseCase> { GetUserUseCaseImpl(get()) }
+    single<HomeUseCase> { HomeUseCaseImpl(get(), get()) }
+    single<QuizUseCase> { QuizUseCaseImpl(get(), get()) }
 }
