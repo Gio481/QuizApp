@@ -9,7 +9,7 @@ class HomeUseCaseImpl(
     private val repository: QuizScoreRepository,
     private val quizRepository: QuizRepository,
 ) : HomeUseCase {
-    override suspend fun getQuizScore(key: String): Int? = repository.getQuizScore(key).first()
+    override suspend fun getQuizScore(key: String): Int = repository.getQuizScore(key).first() ?: 0
     override fun getQuiz(): Quiz = quizRepository.getQuiz()
     override suspend fun removeUse(key: String) = repository.removeUser(key)
 }
