@@ -10,11 +10,7 @@ class QuizScoreRepositoryImpl(private val dataStore: QuizDataStore) : QuizScoreR
         dataStore.saveQuizScore(key, value)
     }
 
-    override suspend fun getQuizScore(key: String): Flow<Int?> {
+    override fun getQuizScore(key: String): Flow<Int?> {
         return dataStore.getQuizScore(key)
-    }
-
-    override suspend fun clearUser() {
-        dataStore.clearUser()
     }
 }
