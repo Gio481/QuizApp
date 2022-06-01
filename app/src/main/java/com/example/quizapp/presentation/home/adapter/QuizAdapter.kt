@@ -18,7 +18,7 @@ class QuizAdapter : ListAdapter<QuizItems, QuizAdapter.ViewHolder>(ItemDiffUtil(
         view.startQuizButton.setOnClickListener {
             listener(getItem(viewHolder.adapterPosition))
         }
-        return ViewHolder(view)
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
