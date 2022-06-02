@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_200"
+    tools:context=".presentation.start_quiz.ui.StartQuizFragment">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startQuizButton"
+        style="@style/MediumText"
+        android:layout_width="@dimen/dimen_250_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_100_dp"
+        android:background="@drawable/button_background"
+        android:text="@string/start_quiz_text"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/enterNameEditText"
+        style="@style/SmallText"
+        android:layout_width="@dimen/dimen_140_dp"
+        android:layout_height="@dimen/dimen_35_dp"
+        android:layout_marginBottom="@dimen/dimen_30_dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/grey_200"
+        app:layout_constraintBottom_toTopOf="@id/startQuizButton"
+        app:layout_constraintEnd_toEndOf="@id/startQuizButton"
+        app:layout_constraintStart_toStartOf="@id/startQuizButton" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/enterYourNameTextView"
+        style="@style/MediumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10_dp"
+        android:text="@string/enter_your_name_text"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/enterNameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/HighText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_20_dp"
+        android:text="@string/my_first_quiz_text"
+        app:layout_constraintBottom_toTopOf="@id/enterYourNameTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

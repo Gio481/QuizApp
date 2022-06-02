@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_60_dp"
+    android:background="@drawable/quiz_answer_background">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/checkAnswerButton"
+        android:layout_width="@dimen/dimen_40_dp"
+        android:layout_height="@dimen/dimen_40_dp"
+        android:layout_marginStart="@dimen/dimen_10_dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/grey_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/answerTextView"
+        style="@style/MediumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20_dp"
+        android:textColor="@color/black_500"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/checkAnswerButton"
+        app:layout_constraintStart_toEndOf="@id/checkAnswerButton"
+        app:layout_constraintTop_toTopOf="@id/checkAnswerButton"
+        tools:text="ჰიმალაი" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/checkIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_check"
+        android:elevation="@dimen/dimen_2_dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/checkAnswerButton"
+        app:layout_constraintEnd_toEndOf="@id/checkAnswerButton"
+        app:layout_constraintStart_toStartOf="@id/checkAnswerButton"
+        app:layout_constraintTop_toTopOf="@id/checkAnswerButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
