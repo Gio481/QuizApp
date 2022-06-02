@@ -20,13 +20,15 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/answerTextView"
         style="@style/MediumText"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/dimen_0_dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimen_20_dp"
         android:textColor="@color/black_500"
         android:textStyle="normal"
+        android:paddingHorizontal="@dimen/dimen_2_dp"
         app:layout_constraintBottom_toBottomOf="@id/checkAnswerButton"
         app:layout_constraintStart_toEndOf="@id/checkAnswerButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/checkAnswerButton"
         tools:text="ჰიმალაი" />
 
